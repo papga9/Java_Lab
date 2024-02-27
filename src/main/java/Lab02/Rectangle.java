@@ -28,5 +28,6 @@ public class Rectangle extends Square{
 
     @Override
     public double getArea() {
-        return super.getSide()*getSideB();
+        return super.getSide() * getSideB();
+    }
 }
