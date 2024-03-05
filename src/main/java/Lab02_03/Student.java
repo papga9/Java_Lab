@@ -1,4 +1,4 @@
-package Lab02;
+package Lab02_03;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -61,5 +61,10 @@ public class Student implements Serializable {
         }
 
         return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        Student pulya = new Student();
+        System.out.println(pulya.toString());
     }
 }
