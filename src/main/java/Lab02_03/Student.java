@@ -2,7 +2,9 @@ package Lab02_03;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Student implements Serializable {
     private String name, neptun;
@@ -66,5 +68,35 @@ public class Student implements Serializable {
     public static void main(String[] args) {
         Student pulya = new Student();
         System.out.println(pulya.toString());
+
+        List<Student> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            var tmp = new Student();
+            list.add(tmp);
+        }
+        for (var l:list ) {
+            System.out.println(l.toString());
+        }
+
+        System.out.println(list.getLast().toString() + list.size());
+
+        Student tmp = null;
+
+        for (var l:list) {
+            if (l.name.equals("This name")) {
+                tmp = l;
+            }
+        }
+
+        if (tmp != null ) list.remove(tmp);
+
+        Map<String, Student> myMap = new HashMap<>();
+
+        for (var l:list ) {
+            myMap.put(l.neptun, l);
+        }
+
+        myMap.get("neptun5");
+
     }
 }
