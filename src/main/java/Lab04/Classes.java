@@ -41,6 +41,18 @@ public class Classes {
                 .filter(x -> x.getName().startsWith("B"))
                 .count();
 
+        List<String> change = new ArrayList<>();
+        change.add("3,14");
+        change.add("1,618");
+        change.add("2.718");
+
+        List<Float> floatChage = change.stream()
+                .map(x -> x.replace(',', '.'))
+                .map(x -> Float.parseFloat(x))
+                .toList();
+
+        System.out.println(change);
+
         /*for (int i = 0; i < course.size(); i++) {
             System.out.println(course.get(i).toString());
         }*/
