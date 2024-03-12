@@ -46,6 +46,8 @@ public class Classes {
         change.add("1,618");
         change.add("2.718");
 
+        //test commit
+
         List<Float> floatChage = change.parallelStream()
                 .map(x -> x.replace(',', '.'))
                 .map(x -> Float.parseFloat(x))
